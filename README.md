@@ -1,62 +1,78 @@
-# SpendWise Dashboard
+# SpendWise
 
-## Project Description
+SpendWise is a budgeting application designed to help users work with their budget and expenses. The JavaScript foundation allows users to enter their budget and expenses, calculate their remaining balance, and view the results in the browser console.
 
-SpendWise is a responsive financial dashboard shell designed as the foundation of a personal finance tracker. The dashboard uses modern CSS Grid and Flexbox techniques to create a clean and responsive interface.
+## JavaScript Concepts Implemented
 
-## Features
+The project demonstrates several JavaScript concepts, including:
 
-- Responsive dashboard layout
-- Sidebar navigation menu
-- Dashboard header
-- Six financial category cards
-- CSS Grid for the overall dashboard and card layout
-- Flexbox for the sidebar, header, and card contents
-- CSS custom properties for the application's theme
-- Responsive design for screens below 768px
-- Hover and keyboard focus micro-interactions
-- Optional dark theme based on the user's system preference
+* Variables
+* Data types
+* User input
+* Number conversion
+* Arithmetic calculations
+* Functions
+* Function parameters and return values
+* Console output
 
-## Financial Categories
+## How Variables Are Used
 
-The dashboard contains the following categories:
+Variables are used to store budgeting information and calculation results.
 
-- Food
-- Transport
-- Rent
-- Entertainment
-- Savings
-- Utilities
+For example:
 
-## Technologies Used
+```javascript
+let budget = 50000;
+let expenses = 15000;
+```
 
-- HTML5
-- CSS3
-- CSS Grid
-- Flexbox
-- CSS Custom Properties
-- CSS Media Queries
+Additional variables store the values entered by the user and the calculated remaining balance.
 
-## Responsive Design
+## How User Input Is Collected
 
-The dashboard uses a media query at screens below 768px. The desktop two-column layout changes into a single-column layout for smaller devices.
+The application uses the JavaScript `prompt()` function to collect the user's budget and expense information.
 
-The responsive layout was tested using the browser's DevTools Device Toolbar.
+```javascript
+let userBudget = Number(prompt("Enter your budget:"));
+let userExpenses = Number(prompt("Enter your total expenses:"));
+```
 
-## Project Files
+The `Number()` function converts the input into numbers so that JavaScript can perform calculations.
 
-### index.html
+## How Calculations Are Performed
 
-Contains the structure and static content of the SpendWise dashboard, including the sidebar, header, navigation menu, and financial category cards.
+SpendWise calculates the remaining balance by subtracting expenses from the budget.
 
-### style.css
+```javascript
+budget - expenses
+```
 
-Contains all visual styling, including the CSS Grid and Flexbox layouts, theme variables, responsive design, card animations, and dark theme.
+The result represents the amount remaining after expenses have been deducted from the budget.
 
-### README.md
+## How Functions Organize the Code
 
-Provides information about the project, its features, technologies, and file structure.
+A reusable function called `calculateBalance()` is used to perform the budget calculation.
 
-## Author
+```javascript
+function calculateBalance(budget, expenses) {
+    return budget - expenses;
+}
+```
 
-SpendWise Dashboard — Week 4 CSS Layout Project
+The function accepts the budget and expenses as parameters and returns the remaining balance. Using a function keeps the calculation organized and makes it reusable.
+
+## Files
+
+* `index.html` - Contains the structure of the SpendWise webpage.
+* `style.css` - Contains the styling for the webpage.
+* `script.js` - Contains the JavaScript logic for user input, calculations, functions, and console output.
+* `README.md` - Contains information about the project and the JavaScript concepts implemented.
+
+## How to Run
+
+1. Open the project in Visual Studio Code.
+2. Open `index.html` using a browser or Live Server.
+3. Enter the requested budget when prompted.
+4. Enter the total expenses when prompted.
+5. Open the browser developer tools and select the Console tab.
+6. View the budget, expenses, and remaining balance.
